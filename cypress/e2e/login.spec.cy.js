@@ -14,7 +14,7 @@ const myInfoPage = new MyInfoPage()
 
 describe('Orange HRM teste', () => {
 
-  it('User Info Update - Sucess', () => {
+  it.only('User Info Update - Sucess', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithAnyUser(userData.userSuccess.username, userData.userSuccess.password)
     
@@ -29,7 +29,7 @@ describe('Orange HRM teste', () => {
 
   })
 
-  it.only('Login-fail', () => {
+  it('Login-fail', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithAnyUser(userData.userFail.username, userData.userFail.password)
     loginPage.checkAccessInvalid()
